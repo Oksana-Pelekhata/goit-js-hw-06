@@ -4,15 +4,10 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 const controslDivEl = document.querySelector('#controls')
-// console.log(controslDivEl)
 const inputNumberEl = controslDivEl.firstElementChild
-// console.log(inputNumberEl)
 const dataCreateBtn = document.querySelector('[data-create]')
-// console.log(dataCreateBtn)
 const dataDestroyBtn = document.querySelector('[data-destroy]')
-// console.log(dataDestroyBtn)
 const boxesDivEl = document.querySelector('#boxes')
-// console.log(boxesDivEl)
 
 dataCreateBtn.addEventListener('click', createBoxes)
 
@@ -26,8 +21,6 @@ function createBoxes() {
     box.style = `height: ${boxSize}px; width:${boxSize}px; background-color: ${getRandomHexColor()}`
     boxSize += 10
     arrayOfBoxes.push(box)
-    // console.log(box);
-    // console.log(arrayOfBoxes)
   }
   boxesDivEl.append(...arrayOfBoxes);
   inputNumberEl.value = '0'

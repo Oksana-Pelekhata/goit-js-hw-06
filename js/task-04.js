@@ -9,14 +9,13 @@ let counterValue = 0;
 
 const handleDecrementBtnClick = () => {
     counterValue -= 1
-    // console.log(counterValue)
     counter.textContent = counterValue
 }
 
 const handleIncrementBtnClick = () => {
     counterValue += 1
-    // console.log(counterValue)
     counter.textContent = counterValue
 }
+
 decrementBtn.addEventListener('click', handleDecrementBtnClick)
 incrementBtn.addEventListener('click', handleIncrementBtnClick)

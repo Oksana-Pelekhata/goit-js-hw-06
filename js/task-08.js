@@ -5,14 +5,14 @@ loginFormEl.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const { elements: { email, password }, } = event.currentTarget;
-    const inputValue = { email:`${email.value}`, password: `${password.value}` }
     
-    if (email.value === "" || password.value === "") {
-    window.alert("All fields should be fullfilled");
+    if (email.value.trim() === "" || password.value.trim() === "") {
+        alert("All fields should be fullfilled");
+        return
     }
-    else {
-        console.log(inputValue)
-    }
+    
+    const inputValue = { email: email.value, password: password.value }
+    console.log(inputValue)
     
     event.target.reset();
 })

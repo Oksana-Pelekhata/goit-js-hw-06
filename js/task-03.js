@@ -26,7 +26,5 @@ const listEl = document.querySelector('.gallery');
 
 const markup = images.map((data) => makeGalleryCard(data)).join('');
 
-// listEl.innerHTML = markup;
-
 listEl.insertAdjacentHTML('afterbegin', markup);
 console.log(markup);
